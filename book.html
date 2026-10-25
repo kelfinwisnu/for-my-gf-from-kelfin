@@ -124,6 +124,7 @@
   <audio id="voiceNote" src="music/VN.mp3" preload="auto"></audio>
 
   <!-- Script untuk Musik & Voice Note -->
+<!-- Script untuk Musik & Voice Note dengan Debugger -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       // 1. Kontrol Musik Utama (Daniel Caesar)
@@ -136,7 +137,7 @@
           if (bgMusic.paused) {
             bgMusic.play().then(() => {
               playIcon.textContent = "❚❚";
-            }).catch(e => console.log("Audio play blocked:", e));
+            }).catch(e => console.log("Musik error:", e));
           } else {
             bgMusic.pause();
             playIcon.textContent = "▶";
@@ -144,7 +145,7 @@
         });
       }
 
-      // 2. Kontrol Voice Note Kelfin
+      // 2. Kontrol Voice Note Kelfin dengan Debug Error
       const vnCard = document.getElementById("vnCardBtn");
       const voiceNote = document.getElementById("voiceNote");
       const vnPlayIcon = document.getElementById("vnPlayIcon");
@@ -155,7 +156,11 @@
           if (voiceNote.paused) {
             voiceNote.play().then(() => {
               vnPlayIcon.textContent = "❚❚";
-            }).catch(e => console.log("VN play blocked:", e));
+            }).catch(e => {
+              // Ini akan memunculkan pesan error spesifik di Console browser (tekan F12)
+              console.error("Gagal memutar Voice Note:", e);
+              alert("Gagal memutar Voice Note! Pastikan file music/VN.mp3 ada dan formatnya valid.");
+            });
           } else {
             voiceNote.pause();
             vnPlayIcon.textContent = "▶";
