@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id" class="book-html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dear - Tiara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    /* CSS untuk Efek Typewriter pada Judul Row 1 */
+    .typewriter-title {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid rgba(255, 255, 255, 0.75);
+      animation: typing 3.5s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: rgba(255, 255, 255, 0.75); }
+    }
+  </style>
+</head>
+<body class="book-page">
+
+  <!-- Navigasi Kapsul Atas -->
+  <div class="nav-container">
+    <div class="nav-bar">
+      <a href="home.html" class="nav-link">Home</a>
+      <a href="book.html" class="nav-link active">Dear</a>
+      <a href="dear.html" class="nav-link">Book</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="garden.html" class="nav-link">Garden</a>
+    </div>
+  </div>
+
+  <!-- Kontainer Carousel 4 Row -->
+  <div class="book-carousel-container">
+    
+    <!-- SLIDE / ROW 1 -->
+    <section class="book-slide">
+      <div class="book-slide-content">
+        <div class="row1-grid">
+          <div class="row1-text">
+            <h2><span class="typewriter-title">TIARA NUR HADISAH,</span></h2>
+            <p>She is a woman I met in 2026—a truly beautiful soul with the most gorgeous hair. I fondly call her CHOCOLATE, simply because her smile is as sweet as it gets.</p>
+          </div>
+          <div>
+            <div class="music-player-card" id="musicCardBtn" title="Putar/Jeda Musik">
+              <img src="img/daniel_caesar.jpg" alt="Daniel Caesar - We Find Love">
+              <div class="music-overlay">
+                <span class="music-info-title">Daniel Caesar - We Find Love</span>
+                <div class="play-btn-circle" id="playIcon">▶</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">play music and scroll ↓</div>
+    </section>
+
+    <!-- SLIDE / ROW 2 (Teks Normal Tanpa Efek) -->
+    <section class="book-slide">
+      <div class="book-slide-content">
+        <p class="story-paragraph">
+          Born on the 30th of March, 2005, She feels most at home surrounded by the deep hues of navy, rich maroon, and earthy brown—a color palette that perfectly reflects her cozy yet sophisticated presence. She has an innate ability to turn simple daily experiences into moments of calm and quiet reflection. Creativity flows effortlessly through everything she does. As someone who loves typing long paragraphs and crafting insightful articles, writing serves as her personal sanctuary where every idea finds its place. Beyond her words, swimming offers her a sense of freedom, while music provides the backdrop to her days. From the smooth R&B melodies of Miguel to the captivating rhythms of Pyrite by Frank Ocean, her musical taste reflects a deep appreciation for mood and feeling.
+        </p>
+      </div>
+    </section>
+
+    <!-- SLIDE / ROW 3 (Teks Normal Tanpa Efek) -->
+    <section class="book-slide">
+      <div class="book-slide-content">
+        <p class="story-paragraph">
+          What makes Tiara truly special is the charming harmony between her strong ambitions and sweet, gentle side. While she dreams of cruising in a classic Mustang marked with the number 95, she finds absolute happiness in the sweetest everyday things—soft squishies, delicate flowers, and the comforting aroma of ramen. Finished off with her go-to drinks, matcha or chocolate, she reminds us that a truly beautiful life is made of bold dreams woven together with gentle, humble joys.
+        </p>
+      </div>
+    </section>
+
+    <!-- SLIDE / ROW 4 -->
+    <section class="book-slide">
+      <div class="book-slide-content">
+        <div class="row4-container">
+          <div class="comment-box">
+            <div class="comment-header">
+              <img src="img/kelfin.jpg" alt="Kelfin Wisnu" class="comment-avatar">
+              <div class="comment-meta">
+                <h4>@Kelfin Wisnu</h4>
+                <span>orang keren tdk sombong</span>
+              </div>
+            </div>
+            <p class="comment-text">
+              "Thank you for walking into my life and turning ordinary days into something extraordinary. Thank you for being my sanctuary, my quiet place in a loud world, and the warmest part of every single day. Loving you feels as natural as breathing, yet as magical as a dream. I love you with all that I am, all that I have been, and all that I will ever become—deeper than any words could ever reach, and more than time could ever measure."
+            </p>
+          </div>
+
+          <div class="vn-card" id="vnCardBtn" title="Putar/Jeda Voice Note">
+            <div class="vn-left">
+              <img src="img/kelfin.jpg" alt="Kelfin" class="vn-avatar">
+              <div class="vn-play-icon" id="vnPlayIcon">▶</div>
+              <div class="vn-wave-line">
+                <div class="vn-wave-progress" id="vnProgress"></div>
+              </div>
+            </div>
+            <span class="vn-label">Voice Note By Kelfin</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Elemen Audio -->
+  <audio id="bgMusic" src="music/we_find_love.mp3" preload="auto" loop></audio>
+  <audio id="voiceNote" src="music/VN.mp3" preload="auto"></audio>
+
+  <!-- Script untuk Musik & Voice Note -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 1. Kontrol Musik Utama (Daniel Caesar)
+      const musicCard = document.getElementById("musicCardBtn");
+      const bgMusic = document.getElementById("bgMusic");
+      const playIcon = document.getElementById("playIcon");
+
+      if (musicCard && bgMusic) {
+        musicCard.addEventListener("click", function () {
+          if (bgMusic.paused) {
+            bgMusic.play().then(() => {
+              playIcon.textContent = "❚❚";
+            }).catch(e => console.log("Audio play blocked:", e));
+          } else {
+            bgMusic.pause();
+            playIcon.textContent = "▶";
+          }
+        });
+      }
+
+      // 2. Kontrol Voice Note Kelfin
+      const vnCard = document.getElementById("vnCardBtn");
+      const voiceNote = document.getElementById("voiceNote");
+      const vnPlayIcon = document.getElementById("vnPlayIcon");
+      const vnProgress = document.getElementById("vnProgress");
+
+      if (vnCard && voiceNote) {
+        vnCard.addEventListener("click", function () {
+          if (voiceNote.paused) {
+            voiceNote.play().then(() => {
+              vnPlayIcon.textContent = "❚❚";
+            }).catch(e => console.log("VN play blocked:", e));
+          } else {
+            voiceNote.pause();
+            vnPlayIcon.textContent = "▶";
+          }
+        });
+
+        voiceNote.addEventListener("timeupdate", function () {
+          if (voiceNote.duration) {
+            const percent = (voiceNote.currentTime / voiceNote.duration) * 100;
+            if (vnProgress) vnProgress.style.width = percent + "%";
+          }
+        });
+
+        voiceNote.addEventListener("ended", function () {
+          vnPlayIcon.textContent = "▶";
+          if (vnProgress) vnProgress.style.width = "0%";
+        });
+      }
+    });
+  </script>
+
+  <!-- Script Transisi Halaman -->
+  <script src="js/transition.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Tiara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home-page">
+
+  <!-- Navigasi Kapsul Atas -->
+  <div class="nav-container">
+    <div class="nav-bar">
+      <a href="home.html" class="nav-link active">Home</a>
+      <a href="book.html" class="nav-link">Dear</a>
+      <a href="dear.html" class="nav-link">Book</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="garden.html" class="nav-link">Garden</a>
+    </div>
+  </div>
+
+  <!-- Kontainer Slide Vertikal 2 Row -->
+  <div class="vertical-slider-container">
+    
+    <!-- ROW 1: Teks Sapaan -->
+    <section class="home-row">
+      <h1 class="typing-text">wellcome, tiara</h1>
+      <div class="scroll-indicator">↓ Scroll kebawah </div>
+    </section>
+
+    <!-- ROW 2: Pemutar Musik (Vinyl Artwork dengan Foto Asli) -->
+    <section class="home-row">
+      <div class="music-card-wrapper" id="cardWrapper" title="Klik untuk Putar/Jeda Musik">
+        <!-- Piringan Hitam Foto Asli di Belakang -->
+        <div class="vinyl-record">
+          <img src="img/vinyl.jpg" alt="Vinyl Record">
+        </div>
+        <!-- Cover Album di Depan -->
+        <img src="img/cover.jpg" alt="Pyrite - Frank Ocean" class="album-cover">
+      </div>
+      <div class="music-details" id="musicDetailsBtn">
+        <span class="music-title-artist">pyrite - frank ocean</span>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Elemen Audio untuk Musik pyrite.mp3 -->
+  <audio id="audioPlayer" src="music/pyrite.mp3" preload="auto" loop></audio>
+
+  <!-- Script Animasi Teks & Musik -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 1. Efek Teks Muncul Per Huruf (Row 1)
+      const typingElement = document.querySelector(".typing-text");
+      if (typingElement) {
+        const text = typingElement.textContent;
+        typingElement.textContent = ""; 
+        typingElement.classList.add("typing-container");
+
+        text.split("").forEach((char, index) => {
+          const span = document.createElement("span");
+          span.textContent = char === " " ? "\u00A0" : char;
+          span.classList.add("char");
+          span.style.animationDelay = `${index * 0.05}s`;
+          typingElement.appendChild(span);
+        });
+      }
+
+      // 2. Kontrol Interaksi Klik Musik (Row 2)
+      const cardWrapper = document.getElementById("cardWrapper");
+      const musicDetailsBtn = document.getElementById("musicDetailsBtn");
+      const audioPlayer = document.getElementById("audioPlayer");
+
+      function toggleMusic() {
+        if (audioPlayer.paused) {
+          audioPlayer.play().then(() => {
+            cardWrapper.classList.add("active"); // Piringan foto asli keluar & berputar
+          }).catch(e => console.log("Audio play blocked:", e));
+        } else {
+          audioPlayer.pause();
+          cardWrapper.classList.remove("active"); // Piringan masuk kembali
+        }
+      }
+
+      if (cardWrapper && audioPlayer) {
+        cardWrapper.addEventListener("click", toggleMusic);
+        musicDetailsBtn.addEventListener("click", toggleMusic);
+      }
+    });
+  </script>
+
+  <!-- Script Transisi Halaman Halus -->
+  <script src="js/transition.js"></script>
+  <!-- Script SPA Navigasi Mulus -->
+  <script src="js/spa.js"></script>
+</body>
+</html>

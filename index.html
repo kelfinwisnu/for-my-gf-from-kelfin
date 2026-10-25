@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOR MY LOVE</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-black m-0 overflow-hidden h-screen w-screen">
+
+  <div id="app" class="relative flex w-full h-full min-h-[600px] justify-center items-center bg-black overflow-hidden">
+    
+   <!-- Teks Utama & Tombol Masuk yang Lebih Besar dan Panjang -->
+<div class="z-50 text-center items-center flex flex-col absolute inset-0 justify-center pointer-events-none">
+  <div class="pointer-events-auto flex flex-col items-center space-y-6">
+    <p class="text-5xl md:text-7xl z-50 text-white italic font-serif">
+      Hello, <br> Tiara Nur Hadisah.
+    </p>
+    <a href="pw.html" class="text-xs z-50 hover:scale-110 transition-transform bg-white text-black rounded-full py-2 w-20 cursor-pointer shadow-md">
+      Masuk
+    </a>
+  </div>
+</div>
+
+    <!-- Container Parallax -->
+    <div id="parallax-container" class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+      
+      <!-- Floating Elements dengan Atribut Depth -->
+      <div class="absolute will-change-transform top-[8%] left-[11%]" data-depth="0.5">
+        <img src="img/1.jpeg" class="w-16 h-16 md:w-24 md:h-24 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-lg pointer-events-auto" />
+      </div>
+
+      <div class="absolute will-change-transform top-[10%] left-[32%]" data-depth="1">
+        <img src="img/2.jpeg" class="w-20 h-20 md:w-28 md:h-28 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-lg pointer-events-auto" />
+      </div>
+
+      <div class="absolute will-change-transform top-[2%] left-[53%]" data-depth="2">
+        <img src="img/3.jpeg" class="w-28 h-40 md:w-40 md:h-52 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-lg pointer-events-auto" />
+      </div>
+
+      <div class="absolute will-change-transform top-[0%] left-[83%]" data-depth="1">
+        <img src="img/3.jpeg" class="w-24 h-24 md:w-32 md:h-32 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-lg pointer-events-auto" />
+      </div>
+
+      <div class="absolute will-change-transform top-[40%] left-[2%]" data-depth="1">
+        <img src="img/4.jpeg" class="w-28 h-28 md:w-36 md:h-36 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-lg pointer-events-auto" />
+      </div>
+
+      <div class="absolute will-change-transform top-[70%] left-[77%]" data-depth="2">
+        <img src="img/5.jpeg" class="w-28 h-28 md:w-36 md:h-48 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-lg pointer-events-auto" />
+      </div>
+
+      <div class="absolute will-change-transform top-[73%] left-[15%]" data-depth="4">
+        <img src="img/6.jpeg" class="w-40 md:w-52 h-auto object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-lg pointer-events-auto" />
+      </div>
+
+      <div class="absolute will-change-transform top-[80%] left-[50%]" data-depth="1">
+        <img src="img/7.jpeg" class="w-24 h-24 md:w-32 md:h-32 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-lg pointer-events-auto" />
+      </div>
+      <div class="absolute will-change-transform top-[50%] left-[50%]" data-depth="1.5">
+  <img src="img/8.jpeg" class="w-24 h-24 md:w-32 md:h-32 object-cover hover:scale-105 duration-200 cursor-pointer transition-transform rounded-lg pointer-events-auto" />
+</div>
+
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById('parallax-container');
+    const elements = document.querySelectorAll('[data-depth]');
+    
+    let mouseX = 0;
+    let mouseY = 0;
+    let sensitivity = -1; 
+    let easingFactor = 0.05;
+
+    const itemStates = Array.from(elements).map(el => {
+      return {
+        element: el,
+        depth: parseFloat(el.getAttribute('data-depth')) || 1,
+        currentX: 0,
+        currentY: 0
+      };
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      mouseX = e.clientX - rect.left - (rect.width / 2);
+      mouseY = e.clientY - rect.top - (rect.height / 2);
+    });
+
+    window.addEventListener('touchmove', (e) => {
+      if(e.touches.length > 0) {
+        const rect = container.getBoundingClientRect();
+        mouseX = e.touches[0].clientX - rect.left - (rect.width / 2);
+        mouseY = e.touches[0].clientY - rect.top - (rect.height / 2);
+      }
+    });
+
+    function animate() {
+      itemStates.forEach(item => {
+        const strength = (item.depth * sensitivity) / 20;
+        const targetX = mouseX * strength;
+        const targetY = mouseY * strength;
+
+        item.currentX += (targetX - item.currentX) * easingFactor;
+        item.currentY += (targetY - item.currentY) * easingFactor;
+
+        item.element.style.transform = `translate3d(${item.currentX}px, ${item.currentY}px, 0)`;
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  </script>
+</body>
+</html>`

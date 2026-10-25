@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book - Tiara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dear-page">
+
+  <!-- Navigasi Kapsul Atas -->
+  <div class="nav-container">
+    <div class="nav-bar">
+      <a href="home.html" class="nav-link">Home</a>
+      <a href="book.html" class="nav-link">Dear</a>
+      <a href="dear.html" class="nav-link active">Book</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="garden.html" class="nav-link">Garden</a>
+    </div>
+  </div>
+
+  <!-- Kontainer Utama 3 Row -->
+  <div class="dear-container">
+    
+    <!-- ROW 1: Judul Utama -->
+    <section class="dear-slide">
+      <div class="dear-title-area">
+        <h1>KUTIPAN<br>Buku</h1>
+        <p>Scroll for read ↓</p>
+      </div>
+    </section>
+
+    <!-- ROW 2: Bagian 1 ("Cantik Itu Luka" — Eka Kurniawan) -->
+    <section class="dear-slide">
+      <h3 class="quotes-section-title">"Cantik Itu Luka" — Eka Kurniawan</h3>
+      <div class="quotes-carousel-wrapper">
+        <button class="quote-nav-btn prev" onclick="moveSlide('track1', -1)">‹</button>
+        <div class="quotes-track-container">
+          <div class="quotes-track" id="track1">
+            
+            <!-- Kartu 1 -->
+            <div class="quote-card">
+              <div class="quote-dots-top"><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div></div>
+              <p class="quote-text-content">"Dunia ini tidak adil, tetapi manusia harus belajar untuk menertawakannya agar tidak menjadi gila."</p>
+              <div class="quote-book-footer">
+                <img src="img/cantik_itu_luka.jpg" alt="Cantik Itu Luka" class="quote-book-cover">
+                <div class="quote-book-info">
+                  <h5>Eka Kurniawan</h5>
+                  <span>Tentang Manusia & Kehidupan</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kartu 2 -->
+            <div class="quote-card">
+              <div class="quote-dots-top"><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div></div>
+              <p class="quote-text-content">"Seseorang tidak pernah benar-benar tahu seberapa kuat dirinya sampai menjadi kuat adalah satu-satunya pilihan yang ia miliki."</p>
+              <div class="quote-book-footer">
+                <img src="img/cantik_itu_luka.jpg" alt="Cantik Itu Luka" class="quote-book-cover">
+                <div class="quote-book-info">
+                  <h5>Eka Kurniawan</h5>
+                  <span>Tentang Manusia & Kehidupan</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kartu 3 -->
+            <div class="quote-card">
+              <div class="quote-dots-top"><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div></div>
+              <p class="quote-text-content">"Tak ada yang lebih mengerikan daripada ingatan yang tak mau mati."</p>
+              <div class="quote-book-footer">
+                <img src="img/cantik_itu_luka.jpg" alt="Cantik Itu Luka" class="quote-book-cover">
+                <div class="quote-book-info">
+                  <h5>Eka Kurniawan</h5>
+                  <span>Tentang Manusia & Kehidupan</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kartu 4 -->
+            <div class="quote-card">
+              <div class="quote-dots-top"><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div></div>
+              <p class="quote-text-content">"Manusia diciptakan dari tanah, dan pada akhirnya mereka akan kembali ke tanah. Namun di antara keduanya, mereka sibuk membuat luka satu sama lain."</p>
+              <div class="quote-book-footer">
+                <img src="img/cantik_itu_luka.jpg" alt="Cantik Itu Luka" class="quote-book-cover">
+                <div class="quote-book-info">
+                  <h5>Eka Kurniawan</h5>
+                  <span>Tentang Manusia & Kehidupan</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kartu 5 -->
+            <div class="quote-card">
+              <div class="quote-dots-top"><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div></div>
+              <p class="quote-text-content">"Cinta sering kali seperti dongeng: indah untuk didengar, tetapi menyakitkan ketika harus dialami dalam dunia nyata."</p>
+              <div class="quote-book-footer">
+                <img src="img/cantik_itu_luka.jpg" alt="Cantik Itu Luka" class="quote-book-cover">
+                <div class="quote-book-info">
+                  <h5>Eka Kurniawan</h5>
+                  <span>Cinta, Harapan, & Penderitaan</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kartu 6 -->
+            <div class="quote-card">
+              <div class="quote-dots-top"><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div></div>
+              <p class="quote-text-content">"Ia menyadari bahwa harapan adalah hal paling berbahaya di dunia ini. Harapan memberi manusia alasan untuk bertahan, tetapi juga cara paling lambat untuk membunuh mereka."</p>
+              <div class="quote-book-footer">
+                <img src="img/cantik_itu_luka.jpg" alt="Cantik Itu Luka" class="quote-book-cover">
+                <div class="quote-book-info">
+                  <h5>Eka Kurniawan</h5>
+                  <span>Cinta, Harapan, & Penderitaan</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kartu 7 -->
+            <div class="quote-card">
+              <div class="quote-dots-top"><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div></div>
+              <p class="quote-text-content">"Kadang-kadang, hal terbaik yang bisa dilakukan oleh seseorang yang terluka adalah pura-pura tidak merasakan apa-apa."</p>
+              <div class="quote-book-footer">
+                <img src="img/cantik_itu_luka.jpg" alt="Cantik Itu Luka" class="quote-book-cover">
+                <div class="quote-book-info">
+                  <h5>Eka Kurniawan</h5>
+                  <span>Cinta, Harapan, & Penderitaan</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <button class="quote-nav-btn next" onclick="moveSlide('track1', 1)">›</button>
+      </div>
+    </section>
+
+    <!-- ROW 3: Bagian 2 ("The Five People You Meet in Heaven" — Mitch Albom) -->
+    <section class="dear-slide">
+      <h3 class="quotes-section-title">"The Five People You Meet in Heaven" — Mitch Albom</h3>
+      <div class="quotes-carousel-wrapper">
+        <button class="quote-nav-btn prev" onclick="moveSlide('track2', -1)">‹</button>
+        <div class="quotes-track-container">
+          <div class="quotes-track" id="track2">
+            
+            <!-- Kartu 1 -->
+            <div class="quote-card">
+              <div class="quote-dots-top"><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div></div>
+              <p class="quote-text-content">"Lost love is still love. It takes a different form, that's all. You can't see their smile or bring them food or ruffle their hair... But memory becomes your partner. You nurture it. You hold it. You dance with it."<br><br><small style="color:rgba(255,255,255,0.5)">"Cinta yang hilang tetaplah cinta..."</small></p>
+              <div class="quote-book-footer">
+                <img src="img/five_people.jpg" alt="The Five People You Meet in Heaven" class="quote-book-cover">
+                <div class="quote-book-info">
+                  <h5>Mitch Albom</h5>
+                  <span>Love & Forever</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kartu 2 -->
+            <div class="quote-card">
+              <div class="quote-dots-top"><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div></div>
+              <p class="quote-text-content">"Life has to end. Love doesn't."<br><br><small style="color:rgba(255,255,255,0.5)">"Hidup harus berakhir. Namun cinta tidak."</small></p>
+              <div class="quote-book-footer">
+                <img src="img/five_people.jpg" alt="The Five People You Meet in Heaven" class="quote-book-cover">
+                <div class="quote-book-info">
+                  <h5>Mitch Albom</h5>
+                  <span>Love & Forever</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kartu 3 -->
+            <div class="quote-card">
+              <div class="quote-dots-top"><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div></div>
+              <p class="quote-text-content">"There are no random acts. That we are all connected. That you can no more separate one life from another than you can separate a breeze from the wind."<br><br><small style="color:rgba(255,255,255,0.5)">"Tidak ada kejadian yang kebetulan..."</small></p>
+              <div class="quote-book-footer">
+                <img src="img/five_people.jpg" alt="The Five People You Meet in Heaven" class="quote-book-cover">
+                <div class="quote-book-info">
+                  <h5>Mitch Albom</h5>
+                  <span>Connection & Fate</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kartu 4 -->
+            <div class="quote-card">
+              <div class="quote-dots-top"><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div></div>
+              <p class="quote-text-content">"Strangers are just family you have yet to come to know."<br><br><small style="color:rgba(255,255,255,0.5)">"Orang asing hanyalah anggota keluarga yang belum sempat kamu kenal."</small></p>
+              <div class="quote-book-footer">
+                <img src="img/five_people.jpg" alt="The Five People You Meet in Heaven" class="quote-book-cover">
+                <div class="quote-book-info">
+                  <h5>Mitch Albom</h5>
+                  <span>Connection & Fate</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kartu 5 -->
+            <div class="quote-card">
+              <div class="quote-dots-top"><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div></div>
+              <p class="quote-text-content">"When you sacrifice something precious, you're not really losing it. You're just passing it on to someone else."<br><br><small style="color:rgba(255,255,255,0.5)">"Ketika kamu mengorbankan sesuatu yang berharga..."</small></p>
+              <div class="quote-book-footer">
+                <img src="img/five_people.jpg" alt="The Five People You Meet in Heaven" class="quote-book-cover">
+                <div class="quote-book-info">
+                  <h5>Mitch Albom</h5>
+                  <span>Sacrifice & Purpose</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kartu 6 -->
+            <div class="quote-card">
+              <div class="quote-dots-top"><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div><div class="quote-dot"></div></div>
+              <p class="quote-text-content">"All parents damage their children. It cannot be helped. Youth, like pristine glass, absorbs the prints of its handlers."<br><br><small style="color:rgba(255,255,255,0.5)">"Semua orang tua melukai anak-anak mereka..."</small></p>
+              <div class="quote-book-footer">
+                <img src="img/five_people.jpg" alt="The Five People You Meet in Heaven" class="quote-book-cover">
+                <div class="quote-book-info">
+                  <h5>Mitch Albom</h5>
+                  <span>Sacrifice & Purpose</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <button class="quote-nav-btn next" onclick="moveSlide('track2', 1)">›</button>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Script Kontrol Slider Kutipan -->
+  <script>
+    const slideIndices = { track1: 0, track2: 0 };
+
+    function moveSlide(trackId, direction) {
+      const track = document.getElementById(trackId);
+      const cards = track.querySelectorAll(".quote-card");
+      const totalCards = cards.length;
+      
+      // Hitung jumlah kartu yang bisa digeser
+      slideIndices[trackId] += direction;
+      
+      if (slideIndices[trackId] < 0) {
+        slideIndices[trackId] = totalCards - 1;
+      } else if (slideIndices[trackId] >= totalCards) {
+        slideIndices[trackId] = 0;
+      }
+
+      const cardWidth = cards[0].offsetWidth + 25; // Lebar kartu + gap
+      track.style.transform = `translateX(-${slideIndices[trackId] * cardWidth}px)`;
+    }
+  </script>
+
+  <!-- Script Transisi Halaman -->
+  <script src="js/transition.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konfirmasi Password</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <!-- Menghubungkan CSS Eksternal -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <label for="password" class="title">confirmasi password</label>
+    
+    <div class="input-wrapper">
+      <input 
+        type="password" 
+        id="password" 
+        class="password-input" 
+        autocomplete="off"
+        autofocus
+      />
+    </div>
+
+    <!-- Tombol Confirm -->
+    <button id="submit-btn" class="submit-btn">Confirm</button>
+    
+    <!-- Pesan Error -->
+    <p id="error-msg" class="error-text"></p>
+  </div>
+
+  <!-- JavaScript Logika Password -->
+  <script>
+    const passwordInput = document.getElementById('password');
+    const submitBtn = document.getElementById('submit-btn');
+    const errorMsg = document.getElementById('error-msg');
+
+    function handleLogin() {
+      const enteredPassword = passwordInput.value;
+
+      // Cek jika password benar (30052005)
+      if (enteredPassword === '30032005') {
+        errorMsg.textContent = '';
+        window.location.href = 'home.html';
+      } else {
+        errorMsg.textContent = 'Password salah, silakan coba lagi!';
+        passwordInput.value = '';
+        passwordInput.focus();
+      }
+    }
+
+    // Event listener untuk tombol dan enter
+    submitBtn.addEventListener('click', handleLogin);
+    passwordInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        handleLogin();
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Tiara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="gallery-page">
+
+  <!-- Navigasi Kapsul Atas -->
+  <div class="nav-container">
+    <div class="nav-bar">
+      <a href="home.html" class="nav-link">Home</a>
+      <a href="book.html" class="nav-link">Dear</a>
+      <a href="dear.html" class="nav-link">Book</a>
+      <a href="gallery.html" class="nav-link active">Gallery</a>
+      <a href="garden.html" class="nav-link">Garden</a>
+    </div>
+  </div>
+
+  <!-- Kontainer Utama 2 Row Vertikal -->
+  <div class="gallery-2row-container">
+    
+    <!-- ROW 1: Carousel Card 3D Interaktif -->
+    <section class="gallery-row">
+      <div class="gallery-header" style="margin-bottom: 15px;">
+        <h2>MEMORIES & MOMENTS</h2>
+        <!-- <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Drag, scroll, or click to explore</p> -->
+      </div>
+
+      <div class="carousel-stage" id="carouselStage">
+        <div class="carousel-card" data-index="0">
+          <img src="img/gallery1.jpg" alt="Memory 1">
+          <div class="card-overlay"><span class="card-number">01 / 08</span><div class="card-title">  </div></div>
+        </div>
+        <div class="carousel-card" data-index="1">
+          <img src="img/gallery2.jpg" alt="Memory 2">
+          <div class="card-overlay"><span class="card-number">02 / 08</span><div class="card-title">  </div></div>
+        </div>
+        <div class="carousel-card" data-index="2">
+          <img src="img/gallery3.jpg" alt="Memory 3">
+          <div class="card-overlay"><span class="card-number">03 / 08</span><div class="card-title">  </div></div>
+        </div>
+        <div class="carousel-card" data-index="3">
+          <img src="img/gallery4.jpg" alt="Memory 4">
+          <div class="card-overlay"><span class="card-number">04 / 08</span><div class="card-title">  </div></div>
+        </div>
+        <div class="carousel-card" data-index="4">
+          <img src="img/gallery5.jpg" alt="Memory 5">
+          <div class="card-overlay"><span class="card-number">05 / 08</span><div class="card-title">  </div></div>
+        </div>
+        <div class="carousel-card" data-index="5">
+          <img src="img/gallery6.jpg" alt="Memory 6">
+          <div class="card-overlay"><span class="card-number">06 / 08</span><div class="card-title">  </div></div>
+        </div>
+        <div class="carousel-card" data-index="6">
+          <img src="img/gallery7.jpg" alt="Memory 7">
+          <div class="card-overlay"><span class="card-number">07 / 08</span><div class="card-title">  </div></div>
+        </div>
+        <div class="carousel-card" data-index="7">
+          <img src="img/gallery8.jpg" alt="Memory 8">
+          <div class="card-overlay"><span class="card-number">08 / 08</span><div class="card-title">  </div></div>
+        </div>
+      </div>
+
+      <div class="carousel-controls" style="margin-top: 20px;">
+        <button class="nav-btn" id="prevBtn" title="Previous">‹</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+        <button class="nav-btn" id="nextBtn" title="Next">›</button>
+      </div>
+
+      <div class="scroll-down-hint">↓ Scroll ke bawah untuk melihat marquee</div>
+    </section>
+
+    <!-- ROW 2: Marquee Grid Berbentuk Kotak dengan Tulisan Samaran -->
+    <section class="gallery-row">
+      <div class="gallery-header" style="margin-bottom: 30px;">
+        <h2>THE BEAUTIFUL EYES COLLECTION</h2>
+        <!-- <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">Endless scrolling memories</p> -->
+      </div>
+
+      <div class="marquee-container">
+        <!-- Baris Marquee 1 (Bergerak ke Kiri) -->
+        <div class="marquee-track">
+          <!-- Item diulang dua kali untuk membuat loop tanpa jeda (seamless) -->
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g1.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g2.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g3.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g4.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g5.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g6.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g7.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g8.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <!-- Duplikat untuk seamless loop -->
+           <div class="marquee-item"><div class="marquee-box"><img src="img/g1.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g2.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g3.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g4.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g5.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g6.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g7.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g8.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+        </div>
+
+        <!-- Baris Marquee 2 (Bergerak ke Kanan / Reverse) -->
+        <div class="marquee-track reverse">
+           <div class="marquee-item"><div class="marquee-box"><img src="img/g1.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g2.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g3.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g4.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g5.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g6.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g7.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g8.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <!-- Duplikat untuk seamless loop -->
+           <div class="marquee-item"><div class="marquee-box"><img src="img/g1.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g2.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g3.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g4.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g5.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g6.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g7.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+          <div class="marquee-item"><div class="marquee-box"><img src="img/g8.jpg" alt="Gallery"></div><span class="marquee-caption">the beautiful eyes</span></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Script Interaktif Carousel 3D (Row 1) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cards = Array.from(document.querySelectorAll(".carousel-card"));
+      const dotsContainer = document.getElementById("carouselDots");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const stage = document.getElementById("carouselStage");
+
+      let currentIndex = 0;
+      const totalCards = cards.length;
+
+      cards.forEach((_, idx) => {
+        const dot = document.createElement("div");
+        dot.classList.add("dot");
+        if (idx === 0) dot.classList.add("active");
+        dot.addEventListener("click", () => goToIndex(idx));
+        dotsContainer.appendChild(dot);
+      });
+
+      const dots = Array.from(document.querySelectorAll(".dot"));
+
+      function updateCarousel() {
+        cards.forEach((card, i) => {
+          let offset = i - currentIndex;
+          if (offset > totalCards / 2) offset -= totalCards;
+          if (offset < -totalCards / 2) offset += totalCards;
+          const absOffset = Math.abs(offset);
+
+          if (absOffset > 2) {
+            card.style.opacity = "0";
+            card.style.transform = `translateX(${offset * 120}px) scale(0.6) rotateY(${offset * -15}deg)`;
+            card.style.zIndex = "0";
+            card.style.pointerEvents = "none";
+            card.classList.remove("active");
+          } else {
+            const translateX = offset * 140;
+            const scale = 1 - absOffset * 0.15;
+            const rotateY = offset * -18;
+            const opacity = 1 - absOffset * 0.35;
+
+            card.style.opacity = opacity;
+            card.style.transform = `translateX(${translateX}px) scale(${scale}) rotateY(${rotateY}deg)`;
+            card.style.zIndex = 10 - absOffset;
+            card.style.pointerEvents = "auto";
+
+            if (offset === 0) {
+              card.classList.add("active");
+            } else {
+              card.classList.remove("active");
+            }
+          }
+        });
+
+        dots.forEach((dot, idx) => {
+          if (idx === currentIndex) {
+            dot.classList.add("active");
+          } else {
+            dot.classList.remove("active");
+          }
+        });
+      }
+
+      function goToIndex(index) {
+        currentIndex = (index + totalCards) % totalCards;
+        updateCarousel();
+      }
+
+      nextBtn.addEventListener("click", () => goToIndex(currentIndex + 1));
+      prevBtn.addEventListener("click", () => goToIndex(currentIndex - 1));
+
+      cards.forEach((card, idx) => {
+        card.addEventListener("click", () => {
+          if (currentIndex !== idx) goToIndex(idx);
+        });
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") goToIndex(currentIndex + 1);
+        if (e.key === "ArrowLeft") goToIndex(currentIndex - 1);
+      });
+
+      let startX = 0;
+      stage.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; });
+      stage.addEventListener("touchend", (e) => {
+        const diffX = e.changedTouches[0].clientX - startX;
+        if (diffX < -40) goToIndex(currentIndex + 1);
+        if (diffX > 40) goToIndex(currentIndex - 1);
+      });
+
+      updateCarousel();
+    });
+  </script>
+
+  <!-- Script Transisi Halaman -->
+  <script src="js/transition.js"></script>
+</body>
+</html>
